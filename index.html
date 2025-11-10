@@ -32,6 +32,14 @@
   <div class="plot-container" id="fig1">
     <img src="Images/donut.html" alt="Donut Chart" style="width:100%; max-width:900px;">
   </div>
+  <div id="fig1"></div>
+  <script>
+    fetch("Images/donut.html")
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById("fig1").innerHTML = html;
+      });
+  </script>
 
   <h2>Figure 2: Where are Indigenous populations in Canada?</h2>
   <div class="plot-container" id="fig2"></div>
