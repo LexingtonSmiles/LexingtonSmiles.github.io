@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>My Analysis Results</title>
-  <!-- Include Plotly JS once -->
+
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <style>
     body {
@@ -27,6 +27,8 @@
       margin: auto;
       border: none;
       width: 100%;
+      max-width: 800px;
+      /* matches your Plotly figure width */
     }
 
     h2 {
@@ -40,18 +42,16 @@
   <h1>Results of Our Analysis</h1>
 
   <h2>Figure 1: What proportion of Canadians identify as Indigenous?</h2>
-  <iframe class="centered-frame " src="Images/donut.html" height="900px" width="600"
-    style="border:2px solid black; display:block; margin:auto;">
-  </iframe>
+  <div style="max-width:800px; margin:auto;">
+    <iframe class="centered-frame" src="Images/donut.html" height="800px" style="border:2px solid black;"></iframe>
+  </div>
 
   <h2>Figure 2: Where are Indigenous populations in Canada?</h2>
   <iframe src="Images/map.html" width="100%" height="900px" style="border:none; display:block; margin:auto;">
   </iframe>
 
-
   <h2>Figure 3: How does mental health relate to social/socioeconomic factors?</h2>
   <div class="plot-container" id="fig3"></div>
-
 
 </body>
 
