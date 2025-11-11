@@ -10,10 +10,13 @@
     body {
       font-family: Arial, sans-serif;
       margin: 20px;
+      overflow-x: hidden;
+      /* Prevent horizontal scrolling */
     }
 
     h2 {
       margin-top: 40px;
+      text-align: center;
     }
 
     .plot-container {
@@ -27,12 +30,16 @@
       margin: auto;
       border: none;
       width: 100%;
-      max-width: 800px;
-      /* matches your Plotly figure width */
+      max-width: 100%;
+      /* allow full responsive scaling */
     }
 
-    h2 {
-      text-align: center;
+    .wide-frame-container {
+      width: 100%;
+      max-width: 1800px;
+      margin: auto;
+      overflow: hidden;
+      /* ensures no scrollbar */
     }
   </style>
 </head>
@@ -43,23 +50,20 @@
 
   <h2>Figure 1: What proportion of Canadians identify as Indigenous?</h2>
   <div style="max-width:800px; margin:auto;">
-    <iframe class="centered-frame" src="Images/donut.html" height="900 px" style="border:2px solid black;"></iframe>
+    <iframe class="centered-frame" src="Images/donut.html" height="900px" style="border:2px solid black;"></iframe>
   </div>
 
   <div>
     <h2>Figure 2: Where are Indigenous populations in Canada?</h2>
-    <iframe src="Images/map.html" width="100%" height="900 px" style="border:none; display:block; margin:auto;">
-    </iframe>
+    <iframe src="Images/map.html" width="100%" height="900px" style="border:none; display:block; margin:auto;"></iframe>
   </div>
 
   <h2>Figure 3: How does mental health relate to social/socioeconomic factors?</h2>
 
-
-  <h2>Figure 4: Indigenous Representation in Canada’s Three Regions With the Highest Indigenous</h2>
-  <div style="max-width: 1800px; margin: auto; overflow: hidden;">
-    <iframe class="centered-frame" src="Images/subplots.html"
-      style="border:none; display:block; margin:auto; overflow:hidden;">
-    </iframe>
+  <h2>Figure 4: Indigenous Representation in Canada’s Three Regions With the Highest Indigenous Populations</h2>
+  <div class="wide-frame-container">
+    <iframe class="centered-frame" src="Images/subplots.html" height="900px"
+      style="border:none; display:block; margin:auto;"></iframe>
   </div>
 
 </body>
